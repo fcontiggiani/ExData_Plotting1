@@ -19,7 +19,7 @@ data$Datetime <- as.POSIXct(datetime)
 par(mar = c(4, 4, 2, 2))
 with(data, {
     plot(Sub_metering_1~Datetime, type="l",
-         ylab="Energy sub meterin", xlab="")
+         ylab="Energy sub metering", xlab="")
     lines(Sub_metering_2~Datetime,col='Red')
     lines(Sub_metering_3~Datetime,col='Blue')
 })
