@@ -4,7 +4,7 @@ temp <- tempfile()
 download.file(fileUrl, temp) ### In case you work under Mac OS, you should try >- download.file(fileUrl, temp, method = "curl")
 							 ### Creates the temporary file that wil be unzipped
 date.download <- system.time ### Register the time of download
-data.hpc <- data.frame(read.csv(unzip(temp), sep=";", na.strings=c("NA", "?"))) ### Read and tidy the data
+data.hpc <- data.frame(read.csv(unzip(temp), sep=";", na.strings=c("NA", "?"))) ### Read and tide the data
 unlink(temp)
 
 data.hpc$Date <- as.Date(data.hpc$Date, format="%d/%m/%Y") ### Convert the date data to the date format
